@@ -33,7 +33,11 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intentSecondActivity);
             }
         });
-
-
     }
+        protected void onResume(){
+            super.onResume();
+        }
+
+
+
 }
