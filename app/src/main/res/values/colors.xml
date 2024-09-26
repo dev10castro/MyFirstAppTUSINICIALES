@@ -2,5 +2,6 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name= "violet">#EDE7F6</color>
+    <color name= "blueButton">#0066FF</color>
+    <color name= "blueFondo">#AAD8FF</color>
 </resources>

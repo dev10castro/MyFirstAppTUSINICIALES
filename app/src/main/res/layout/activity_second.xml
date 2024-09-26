@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@color/violet"
+        android:background="@color/blueFondo"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="1dp">
 
@@ -26,7 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:layout_marginTop="80sp"
+            android:layout_marginTop="80dp"
             android:inputType="text"
             android:layout_marginBottom="20dp"
             android:hint="Name and Surname"
@@ -55,7 +55,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=" Soy mayor de 18"
-            android:layout_marginBottom="40dp"
+            android:layout_marginBottom="60dp"
             android:textSize="18dp"/>
 
         <Button
@@ -64,6 +64,7 @@
             android:layout_height="wrap_content"
             android:textSize="30dp"
             android:height="100dp"
+            android:backgroundTint="@color/blueButton"
             android:layout_marginBottom="30dp"
             android:text="Enviar Datos" />
 
@@ -72,6 +73,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="30dp"
+            android:backgroundTint="@color/blueButton"
             android:height="100dp"
             android:text="Atrás" />
 

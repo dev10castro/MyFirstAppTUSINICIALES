@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/violet"
+        android:background="@color/blueFondo"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="-6dp"
         tools:layout_editor_absoluteY="1dp">
@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="150dp"
-            android:layout_marginBottom="100dp"
+            android:layout_marginBottom="160dp"
             android:text="MyFirstAppDCS"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Display3" />
@@ -31,6 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:height="100dp"
+            android:backgroundTint="@color/blueButton"
             android:text="Escribir Mensaje"
             android:textSize="30dp" />
 
