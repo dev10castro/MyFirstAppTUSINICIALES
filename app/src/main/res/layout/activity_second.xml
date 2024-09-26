@@ -37,7 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Years"
+            android:hint="Age"
             android:layout_marginBottom="20dp"
             android:inputType="number" />
 
@@ -47,14 +47,14 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:layout_marginBottom="30dp"
-            android:hint="Stature"
+            android:hint="Stature in meters"
             android:inputType="numberDecimal" />
 
         <Switch
             android:id="@+id/years"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=" Soy mayor de 18"
+            android:text=" Acepto las condiciones"
             android:layout_marginBottom="60dp"
             android:textSize="18dp"/>
 

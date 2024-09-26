@@ -73,6 +73,6 @@
             android:textSize="30dp"
             android:backgroundTint="@color/blueButton"
             android:height="100dp"
-            android:text="Inicio" />
+            android:text="Volver a Inicio" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

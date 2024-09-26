@@ -27,6 +27,7 @@ public class SecondActivity extends AppCompatActivity {
             return insets;
         });
 
+        // Obtiene referencias a los elementos de la interfaz
         EditText name = findViewById(R.id.nameSurname);
         EditText yourAge = findViewById(R.id.editTextyears);
         EditText stature = findViewById(R.id.editTextestature);
@@ -34,58 +35,66 @@ public class SecondActivity extends AppCompatActivity {
         Button send = findViewById(R.id.buttonSend);
         Button back = findViewById(R.id.buttonBack);
 
-    back.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Intent intenttoMainctivity = new Intent(SecondActivity.this,MainActivity.class);
-            startActivity(intenttoMainctivity);
-        }
+// Configura un listener para el botón "Volver"
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                // Crea una intención para regresar a la actividad principal
+                Intent intenttoMainctivity = new Intent(SecondActivity.this, MainActivity.class);
 
-    });
-
-    send.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-
-            if(name.getText().toString().isEmpty()){
-                Toast toastName = new Toast(SecondActivity.this);
-                toastName.setText("Name can´t be empty");
-                toastName.show();
-            } else if (yourAge.getText().toString().isEmpty()) {
-                Toast toastAge = new Toast(SecondActivity.this);
-                toastAge.setText("Age can´t be empty");
-                toastAge.show();
-
-            }else if(stature.getText().toString().isEmpty()){
-                Toast toastStature = new Toast(SecondActivity.this);
-                toastStature.setText("Stature can´t be empty");
-                toastStature.show();
-            }else {
-
-                Intent intenttoThirdActivity = new Intent(SecondActivity.this, ThirdActivity.class);
-
-                intenttoThirdActivity.putExtra("name",name.getText().toString());
-                intenttoThirdActivity.putExtra("age",yourAge.getText().toString());
-                intenttoThirdActivity.putExtra("stature",stature.getText().toString());
-
-                if(sw1.isChecked()){
-                    intenttoThirdActivity.putExtra("upto18","Soy mayor de 18");
-                }else{
-                    intenttoThirdActivity.putExtra("upto18","No soy mayor de 18");
-                }
-
-                startActivity(intenttoThirdActivity);
+                // Inicia la actividad principal
+                startActivity(intenttoMainctivity);
             }
+        });
 
+// Configura un listener para el botón "Enviar"
+        send.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Verifica si el campo de nombre está vacío
+                if (name.getText().toString().isEmpty()) {
 
-        }
-    });
+                    // Muestra un mensaje de error si el nombre está vacío
+                    Toast toastName = Toast.makeText(SecondActivity.this, "Name can't be empty", Toast.LENGTH_SHORT);
+                    toastName.show();
+                }
+                // Verifica si el campo de edad está vacío
+                else if (yourAge.getText().toString().isEmpty()) {
 
-    ;
+                    // Muestra un mensaje de error si la edad está vacía
+                    Toast toastAge = Toast.makeText(SecondActivity.this, "Age can't be empty", Toast.LENGTH_SHORT);
+                    toastAge.show();
+                }
+                // Verifica si el campo de estatura está vacío
+                else if (stature.getText().toString().isEmpty()) {
 
+                    // Muestra un mensaje de error si la estatura está vacía
+                    Toast toastStature = Toast.makeText(SecondActivity.this, "Stature can't be empty", Toast.LENGTH_SHORT);
+                    toastStature.show();
+                }
+                // Si todos los campos están llenos, procede a la siguiente actividad
+                else {
+                    // Crea un intent para iniciar la tercera activity
+                    Intent intenttoThirdActivity = new Intent(SecondActivity.this, ThirdActivity.class);
 
+                    // Envía los datos ingresados a la tercera actividad
+                    intenttoThirdActivity.putExtra("name", name.getText().toString());
+                    intenttoThirdActivity.putExtra("age", yourAge.getText().toString());
+                    intenttoThirdActivity.putExtra("stature", stature.getText().toString());
 
+                    // Verifica el estado del Switch y envía un mensaje correspondiente en funcion de si es true o false
+                    if (sw1.isChecked()) {
+                        intenttoThirdActivity.putExtra("Acept", "Acepto las condiciones");
+                    } else {
+                        intenttoThirdActivity.putExtra("Acept", "No acepto las condiciones");
+                    }
+
+                    // Inicia la tercera activity
+                    startActivity(intenttoThirdActivity);
+                }
+            }
+        });
 
 
     }
