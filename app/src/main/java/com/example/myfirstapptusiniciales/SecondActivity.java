@@ -1,6 +1,9 @@
 package com.example.myfirstapptusiniciales;
 
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Switch;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +23,18 @@ public class SecondActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        EditText name = findViewById(R.id.nameSurname);
+        EditText yourAge = findViewById(R.id.editTextyears);
+        EditText stature = findViewById(R.id.editTextestature);
+        Switch sw1 = findViewById(R.id.years);
+        Button send = findViewById(R.id.buttonSend);
+        Button back = findViewById(R.id.buttonBack);
+
+
+
+
+
 
 
     }
